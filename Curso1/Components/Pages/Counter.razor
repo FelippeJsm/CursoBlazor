@@ -1,0 +1,34 @@
+﻿@page "/counter"
+@using MudBlazor
+
+<MudThemeProvider/>
+<MudDialogProvider/>
+<MudSnackbarProvider/>
+
+<PageTitle>CounterF2</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Contagem Corrente: @currentCount</p>
+
+
+
+<button class="btn btn-primary" @onclick="IncrementCount">Clique em Mim</button>
+
+@code {
+    private int currentCount = 0;
+    private int somaqto = 1;
+
+    private void IncrementCount()
+    {
+        if (currentCount >= 10)
+        {
+            currentCount = 0;
+        }
+        else
+        {
+            currentCount += somaqto;
+        }
+        
+    }
+}
